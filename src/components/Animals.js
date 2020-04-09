@@ -3,96 +3,96 @@ import React, {Component} from 'react';
 let animal = [
     {
       image: '/images/dog1.jpg',
-      type: 'John Peters',
-      name: 'news',
+      type: 'Dog',
+      name: 'Mars',
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis labore vel officiis magnam, molestiae aspernatur quasi culpa iure alias quod atque sequi repellat corrupti cupiditate nulla autem? Delectus, sequi placeat.',
       animalId: '1'
     },
     {
-      image: 'What to do in isolation',
-      type: 'Wanda Simon',
-      name: 'news',
+      image: '/images/dog2.jpg',
+      type: 'Dog',
+      name: 'Brody',
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis labore vel officiis magnam, molestiae aspernatur quasi culpa iure alias quod atque sequi repellat corrupti cupiditate nulla autem? Delectus, sequi placeat.',
       animalId: '2'
     },
     {
-      image: 'My Plants are Dying',
-      type: 'Lucy Grand',
-      name: 'outdoors',
+      image: '/images/dog3.jpg',
+      type: 'Dog',
+      name: 'Pistachio',
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis labore vel officiis magnam, molestiae aspernatur quasi culpa iure alias quod atque sequi repellat corrupti cupiditate nulla autem? Delectus, sequi placeat.',
       animalId: '3'
     },
     {
-      image: 'Stuck in A Room',
-      type: 'Burke Ginsen',
-      name: 'news',
+      image: '/images/tiger1.jpg',
+      type: 'Tiger',
+      name: 'Kicker',
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis labore vel officiis magnam, molestiae aspernatur quasi culpa iure alias quod atque sequi repellat corrupti cupiditate nulla autem? Delectus, sequi placeat.',
       animalId: '4'
     },
     {
-      image: 'Outside My Window',
-      type: 'Laura Nivers',
-      name: 'outdoors',
+      image: '/images/tiger2.jpg',
+      type: 'Tiger',
+      name: 'Storm',
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis labore vel officiis magnam, molestiae aspernatur quasi culpa iure alias quod atque sequi repellat corrupti cupiditate nulla autem? Delectus, sequi placeat.',
       animalId: '5'
     },
     {
-      image: 'Outside My Window',
-      type: 'Laura Nivers',
-    name: 'outdoors',
+    image: '/images/tiger3.jpg',
+    type: 'Tiger',
+    name: 'Itchy',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis labore vel officiis magnam, molestiae aspernatur quasi culpa iure alias quod atque sequi repellat corrupti cupiditate nulla autem? Delectus, sequi placeat.',
     animalId: '6'
     },
     {
-    image: 'Outside My Window',
-    type: 'Laura Nivers',
-    name: 'outdoors',
+    image: '/images/dolphin1.jpg',
+    type: 'Dolphin',
+    name: 'Omelette',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis labore vel officiis magnam, molestiae aspernatur quasi culpa iure alias quod atque sequi repellat corrupti cupiditate nulla autem? Delectus, sequi placeat.',
     animalId: '7'
   },
   {
-    image: 'Outside My Window',
-    type: 'Laura Nivers',
-    name: 'outdoors',
+    image: '/images/dolphin2.jpg',
+    type: 'Dolphin',
+    name: 'Pistol',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis labore vel officiis magnam, molestiae aspernatur quasi culpa iure alias quod atque sequi repellat corrupti cupiditate nulla autem? Delectus, sequi placeat.',
     animalId: '8'
   },
   {
-    image: 'Outside My Window',
-    type: 'Laura Nivers',
-    name: 'outdoors',
+    image: '/images/dolphin3.jpg',
+    type: 'Dolphin',
+    name: 'Chief',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis labore vel officiis magnam, molestiae aspernatur quasi culpa iure alias quod atque sequi repellat corrupti cupiditate nulla autem? Delectus, sequi placeat.',
     animalId: '9'
   },
   {
-    image: 'Outside My Window',
-    type: 'Laura Nivers',
-    name: 'outdoors',
+    image: '/images/horse1.jpg',
+    type: 'Horse',
+    name: 'Zuni',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis labore vel officiis magnam, molestiae aspernatur quasi culpa iure alias quod atque sequi repellat corrupti cupiditate nulla autem? Delectus, sequi placeat.',
     animalId: '10'
   },
   {
-    image: 'Outside My Window',
-    type: 'Laura Nivers',
-    name: 'outdoors',
+    image: '/images/horse2.jpg',
+    type: 'Horse',
+    name: 'Squirt',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis labore vel officiis magnam, molestiae aspernatur quasi culpa iure alias quod atque sequi repellat corrupti cupiditate nulla autem? Delectus, sequi placeat.',
     animalId: '11'
   },
   {
-    image: 'Outside My Window',
-    type: 'Laura Nivers',
-    name: 'outdoors',
+    image: '/images/horse3.jpg',
+    type: 'Horse',
+    name: 'Tinkerbell',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis labore vel officiis magnam, molestiae aspernatur quasi culpa iure alias quod atque sequi repellat corrupti cupiditate nulla autem? Delectus, sequi placeat.',
     animalId: '12'
@@ -113,7 +113,6 @@ class Images extends Component {
         return (
             <div>
                 <img src={this.state.image} style={{ height: '100px', width: '100px'}} />
-
             </div>
         )
     }
