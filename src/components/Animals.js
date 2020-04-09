@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-let animal = [
+let animals = [
     {
       image: '/images/dog1.jpg',
       type: 'Dog',
@@ -99,23 +99,41 @@ let animal = [
   }
     ];
 
-class Images extends Component {
+class Animals extends Component {
     constructor(){
         super()
         this.state = {
-            image: '/images/dog1.jpg'
+            animals,
         }
     }
-
-  
 
     render(){
         return (
             <div>
-                <img src={this.state.image} style={{ height: '100px', width: '100px'}} />
+                {this.state.animals.map((animal, idx) => {
+                    return (
+                        <div key={animal.animalId} className="ui card">
+                            <div className="image" >
+                                <img src={animal.image} style={{width:'100px'}}/>
+                            </div>
+                            <div className="content">
+                                <div className="header"></div>
+                                <div className="meta"><span className="date">Joined in 2015</span></div>
+                                <div className="description">Matthew is a musician living in Nashville.</div>
+                            </div>
+                            <div className="extra content">
+                                <a>
+                                <i aria-hidden="true" className="user icon"></i>
+                                22 Friends
+                                </a>
+                            </div>
+                        </div>
+                    )
+                })}
             </div>
+
         )
     }
 }
 
-export default Images;
+export default Animals;
