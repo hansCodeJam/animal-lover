@@ -1,4 +1,9 @@
 import React, {Component} from 'react';
+import { Card, Image } from 'semantic-ui-react';
+import './App.css';
+import 'semantic-ui-css/semantic.min.css'
+import Buttons from './Buttons';
+
 
 let animals = [
     {
@@ -6,7 +11,7 @@ let animals = [
       type: 'Dog',
       name: 'Mars',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis labore vel officiis magnam, molestiae aspernatur quasi culpa iure alias quod atque sequi repellat corrupti cupiditate nulla autem? Delectus, sequi placeat.',
+        'Mars chiln by the lake',
       animalId: '1'
     },
     {
@@ -14,7 +19,7 @@ let animals = [
       type: 'Dog',
       name: 'Brody',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis labore vel officiis magnam, molestiae aspernatur quasi culpa iure alias quod atque sequi repellat corrupti cupiditate nulla autem? Delectus, sequi placeat.',
+        'Brody inside a box',
       animalId: '2'
     },
     {
@@ -22,7 +27,7 @@ let animals = [
       type: 'Dog',
       name: 'Pistachio',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis labore vel officiis magnam, molestiae aspernatur quasi culpa iure alias quod atque sequi repellat corrupti cupiditate nulla autem? Delectus, sequi placeat.',
+        'Pistachio taking a breaking at the beach',
       animalId: '3'
     },
     {
@@ -30,7 +35,7 @@ let animals = [
       type: 'Tiger',
       name: 'Kicker',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis labore vel officiis magnam, molestiae aspernatur quasi culpa iure alias quod atque sequi repellat corrupti cupiditate nulla autem? Delectus, sequi placeat.',
+        'Kicker showing off his sharp teeth ',
       animalId: '4'
     },
     {
@@ -38,7 +43,7 @@ let animals = [
       type: 'Tiger',
       name: 'Storm',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis labore vel officiis magnam, molestiae aspernatur quasi culpa iure alias quod atque sequi repellat corrupti cupiditate nulla autem? Delectus, sequi placeat.',
+        'Storm swimming after long hot day',
       animalId: '5'
     },
     {
@@ -46,7 +51,7 @@ let animals = [
     type: 'Tiger',
     name: 'Itchy',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis labore vel officiis magnam, molestiae aspernatur quasi culpa iure alias quod atque sequi repellat corrupti cupiditate nulla autem? Delectus, sequi placeat.',
+      'Itchy looking for a pray to snack on',
     animalId: '6'
     },
     {
@@ -54,7 +59,7 @@ let animals = [
     type: 'Dolphin',
     name: 'Omelette',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis labore vel officiis magnam, molestiae aspernatur quasi culpa iure alias quod atque sequi repellat corrupti cupiditate nulla autem? Delectus, sequi placeat.',
+      'Omelette and his friend casually swimming',
     animalId: '7'
   },
   {
@@ -62,7 +67,7 @@ let animals = [
     type: 'Dolphin',
     name: 'Pistol',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis labore vel officiis magnam, molestiae aspernatur quasi culpa iure alias quod atque sequi repellat corrupti cupiditate nulla autem? Delectus, sequi placeat.',
+      'Pistol the surfer hitting the waves again',
     animalId: '8'
   },
   {
@@ -70,7 +75,7 @@ let animals = [
     type: 'Dolphin',
     name: 'Chief',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis labore vel officiis magnam, molestiae aspernatur quasi culpa iure alias quod atque sequi repellat corrupti cupiditate nulla autem? Delectus, sequi placeat.',
+      'Chief is always showing off',
     animalId: '9'
   },
   {
@@ -78,7 +83,7 @@ let animals = [
     type: 'Horse',
     name: 'Zuni',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis labore vel officiis magnam, molestiae aspernatur quasi culpa iure alias quod atque sequi repellat corrupti cupiditate nulla autem? Delectus, sequi placeat.',
+      'Zuni looking terrified at the camera',
     animalId: '10'
   },
   {
@@ -86,7 +91,7 @@ let animals = [
     type: 'Horse',
     name: 'Squirt',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis labore vel officiis magnam, molestiae aspernatur quasi culpa iure alias quod atque sequi repellat corrupti cupiditate nulla autem? Delectus, sequi placeat.',
+      'Squirt is one big horse',
     animalId: '11'
   },
   {
@@ -94,7 +99,7 @@ let animals = [
     type: 'Horse',
     name: 'Tinkerbell',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis labore vel officiis magnam, molestiae aspernatur quasi culpa iure alias quod atque sequi repellat corrupti cupiditate nulla autem? Delectus, sequi placeat.',
+      'Tinkerbell just being Tinkerbell',
     animalId: '12'
   }
     ];
@@ -107,30 +112,36 @@ class Animals extends Component {
         }
     }
 
+    
+
     render(){
         return (
             <div>
                 {this.state.animals.map((animal, idx) => {
-                    return (
-                        <div key={animal.animalId} className="ui card">
-                            <div className="image" >
-                                <img src={animal.image} style={{width:'100px'}}/>
-                            </div>
-                            <div className="content">
-                                <div className="header"></div>
-                                <div className="meta"><span className="date">Joined in 2015</span></div>
-                                <div className="description">Matthew is a musician living in Nashville.</div>
-                            </div>
-                            <div className="extra content">
+                    return(   
+                        <div className='card'>
+                            <Card key={animal.animalId} >
+                                <Image src={animal.image} wrapped ui={false} />
+                                <Card.Content>
+                                <Card.Header>{animal.name}</Card.Header>
+                                <Card.Meta>
+                                    <span className='date'>{animal.type}</span>
+                                </Card.Meta>
+                                <Card.Description>
+                                    {animal.description}
+                                </Card.Description>
+                                </Card.Content>
+                                <Card.Content extra>
                                 <a>
-                                <i aria-hidden="true" className="user icon"></i>
-                                22 Friends
+                                    <Buttons />
                                 </a>
-                            </div>
-                        </div>
+                                </Card.Content>
+                            </Card> 
+                        </div>                         
                     )
                 })}
             </div>
+                
 
         )
     }
