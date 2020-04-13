@@ -4,6 +4,31 @@
     padding: 10px;
 }
 
+.sidebar {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+}
+
 .red {
     background-color: red;
+}
+
+#App{
+    display: grid;
+  width: 100%;
+  height: 250px;
+  grid-template-areas: "head sidebar"
+                       "head sidebar"
+                       "head sidebar";
+  grid-template-rows: 50px 1fr 30px;
+  /* grid-template-columns: 150px 1fr; */
+}
+
+#App > Animal {
+    grid-area: head;
+}
+
+#App > Sidebar {
+    grid-area: sidebar;
 }
